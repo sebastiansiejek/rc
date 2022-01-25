@@ -1,13 +1,37 @@
-const fs = require('fs')
+import * as fs from 'fs'
+import * as inquirer from 'inquirer'
 import cli from 'cli-ux'
-import { Command } from '@oclif/core'
 import componentTemplate from '../../inc/templates/componentTemplate'
+import styledComponentTemplate from '../../inc/templates/styledComponentTemplate'
+import { Command } from '@oclif/core'
+
 export default class Component extends Command {
   static description = ''
   static examples = ['<%= config.bin %> <%= command.id %>']
 
   public async run(): Promise<void> {
     const name = await cli.prompt('Name')
+    const stylesResponse = await inquirer.prompt([
+      {
+        name: 'styles',
+        message: 'Do you want to add component styled?',
+        type: 'confirm',
+        choices: [{ name: 'Yes' }],
+      },
+    ])
+
+    if (stylesResponse.styles) {
+      fs.writeFile(
+        `${name}.styled.ts`,
+        styledComponentTemplate({
+          name,
+        }),
+        (err: any) => {
+          if (err) throw err
+          console.log(`Component styled created!`)
+        }
+      )
+    }
 
     fs.writeFile(
       `${name}.tsx`,
