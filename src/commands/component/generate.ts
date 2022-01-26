@@ -28,8 +28,8 @@ export default class Component extends Command {
         componentTemplate({
           name,
         }),
-        (err: any) => {
-          if (err) throw err
+        (error) => {
+          if (error) throw error
           console.log(`Component ${name} created!`)
         }
       )
@@ -40,8 +40,8 @@ export default class Component extends Command {
           styledComponentTemplate({
             name,
           }),
-          (err: any) => {
-            if (err) throw err
+          (error: any) => {
+            if (error) throw error
             console.log(`Component styled created!`)
           }
         )
