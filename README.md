@@ -8,11 +8,11 @@ RC - React CLI
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install -g rc
+$ npm install -g @sebastiansiejek/rc
 $ rc COMMAND
 running command...
 $ rc (--version)
-rc/0.0.1 darwin-x64 node-v14.18.2
+@sebastiansiejek/rc/0.0.1 darwin-x64 node-v14.18.2
 $ rc --help [COMMAND]
 USAGE
   $ rc COMMAND
