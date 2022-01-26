@@ -1,13 +1,5 @@
-oclif-hello-world
+RC - React CLI
 =================
-
-oclif example Hello World CLI
-
-[![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
-[![Downloads/week](https://img.shields.io/npm/dw/oclif-hello-world.svg)](https://npmjs.org/package/oclif-hello-world)
-[![License](https://img.shields.io/npm/l/oclif-hello-world.svg)](https://github.com/oclif/hello-world/blob/main/package.json)
 
 <!-- toc -->
 * [Usage](#usage)
@@ -29,6 +21,8 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
+* [`rc component [FILE]`](#rc-component-file)
+* [`rc component generate`](#rc-component-generate)
 * [`rc hello PERSON`](#rc-hello-person)
 * [`rc hello world`](#rc-hello-world)
 * [`rc help [COMMAND]`](#rc-help-command)
@@ -38,6 +32,37 @@ USAGE
 * [`rc plugins:link PLUGIN`](#rc-pluginslink-plugin)
 * [`rc plugins:uninstall PLUGIN...`](#rc-pluginsuninstall-plugin)
 * [`rc plugins update`](#rc-plugins-update)
+
+## `rc component [FILE]`
+
+describe the command here
+
+```
+USAGE
+  $ rc component [FILE] [-n <value>] [-f]
+
+FLAGS
+  -f, --force
+  -n, --name=<value>  name to print
+
+DESCRIPTION
+  describe the command here
+
+EXAMPLES
+  $ rc component
+```
+
+_See code: [dist/commands/component.ts](https://github.com/sebastiansiejek/rc-cli/blob/v0.0.0/dist/commands/component.ts)_
+
+## `rc component generate`
+
+```
+USAGE
+  $ rc component generate
+
+EXAMPLES
+  $ rc component generate
+```
 
 ## `rc hello PERSON`
 
