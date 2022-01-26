@@ -20,28 +20,32 @@ export default class Component extends Command {
       },
     ])
 
-    if (stylesResponse.styles) {
+    fs.mkdir(name, (error) => {
+      if (error) throw error
+
       fs.writeFile(
-        `${name}.styled.ts`,
-        styledComponentTemplate({
+        `${name}/${name}.tsx`,
+        componentTemplate({
           name,
         }),
         (err: any) => {
           if (err) throw err
-          console.log(`Component styled created!`)
+          console.log(`Component ${name} created!`)
         }
       )
-    }
 
-    fs.writeFile(
-      `${name}.tsx`,
-      componentTemplate({
-        name,
-      }),
-      (err: any) => {
-        if (err) throw err
-        console.log(`Component ${name} created!`)
+      if (stylesResponse.styles) {
+        fs.writeFile(
+          `${name}/${name}.styled.ts`,
+          styledComponentTemplate({
+            name,
+          }),
+          (err: any) => {
+            if (err) throw err
+            console.log(`Component styled created!`)
+          }
+        )
       }
-    )
+    })
   }
 }
