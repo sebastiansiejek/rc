@@ -5,7 +5,7 @@ import componentTemplate from '../../inc/templates/componentTemplate'
 import styledComponentTemplate from '../../inc/templates/styledComponentTemplate'
 import { Command } from '@oclif/core'
 
-export default class Component extends Command {
+export default class Generate extends Command {
   static description = ''
   static examples = ['<%= config.bin %> <%= command.id %>']
 
