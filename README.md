@@ -12,7 +12,7 @@ $ npm install -g rc
 $ rc COMMAND
 running command...
 $ rc (--version)
-rc/0.0.0 darwin-x64 node-v14.18.2
+rc/0.0.1 darwin-x64 node-v14.18.2
 $ rc --help [COMMAND]
 USAGE
   $ rc COMMAND
@@ -52,7 +52,7 @@ EXAMPLES
   $ rc component
 ```
 
-_See code: [dist/commands/component.ts](https://github.com/sebastiansiejek/rc-cli/blob/v0.0.0/dist/commands/component.ts)_
+_See code: [dist/commands/component.ts](https://github.com/sebastiansiejek/rc-cli/blob/v0.0.1/dist/commands/component.ts)_
 
 ## `rc component generate`
 
@@ -86,7 +86,7 @@ EXAMPLES
   hello friend from oclif! (./src/commands/hello/index.ts)
 ```
 
-_See code: [dist/commands/hello/index.ts](https://github.com/sebastiansiejek/rc-cli/blob/v0.0.0/dist/commands/hello/index.ts)_
+_See code: [dist/commands/hello/index.ts](https://github.com/sebastiansiejek/rc-cli/blob/v0.0.1/dist/commands/hello/index.ts)_
 
 ## `rc hello world`
 

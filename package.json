@@ -1,6 +1,6 @@
 {
-  "name": "rc",
-  "version": "0.0.0",
+  "name": "@sebastiansiejek/rc",
+  "version": "0.0.1",
   "description": "CLI to manage react application",
   "author": "Sebastian Siejek @sebastiansiejek",
   "bin": {
